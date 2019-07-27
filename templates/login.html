@@ -1,0 +1,22 @@
+{% extends 'layout.html' %}
+
+{%block outerbody%}
+<body background="https://previews.123rf.com/images/sittipong/sittipong1401/sittipong140100059/25235868-green-artificial-turf-pattern-texture-for-background.jpg">
+{% endblock %}
+
+{% block body %}
+<div style="background:white !important" class=jumbotron text-center">
+  <h1>Login</h1>
+  <form action="" method="POST">
+    <div class="form-group">
+      <label>Username</label>
+      <input type="text" name="username" class="form-control" value={{request.form.username}}>
+    </div>
+    <div class="form-group">
+      <label>Password</label>
+      <input type="password" name="password" class="form-control" value={{request.form.password}}>
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
+</div>
+{% endblock %}

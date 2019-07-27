@@ -1,0 +1,11 @@
+{% macro render_field(field) %}
+  {{ field.label }}
+  {{ field(**kwargs)|safe }}
+  {% if field.errors %}
+    {% for error in field.errors %}
+    {% if error!='Not a valid integer value' %}
+    <span class="help-inline">{{ error }}</span>
+    {% endif %}
+    {% endfor %}
+  {% endif %}
+{% endmacro %}
